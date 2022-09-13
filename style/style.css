@@ -11,9 +11,10 @@ body .active {
   box-shadow: 0 0 1rem #695f5c;
 }
 body .title {
+  margin: 5% auto;
   font-size: 5rem;
   text-align: center;
-  color: white;
+  color: rgba(255, 255, 255, 0.831);
   -webkit-animation: titleAnim 2s ease 0s 1 normal forwards;
           animation: titleAnim 2s ease 0s 1 normal forwards;
 }

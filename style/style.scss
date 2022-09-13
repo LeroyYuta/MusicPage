@@ -14,11 +14,11 @@ body {
     }
 
     .title {
+        margin: 5% auto;
         font-size: 5rem;
         text-align: center;
-        color: $titleColor;
+        color: $whiteKeysColor;
         animation: titleAnim 2s ease 0s 1 normal forwards;
-        // filter: blur(1px);
     }
 
     @keyframes titleAnim {
