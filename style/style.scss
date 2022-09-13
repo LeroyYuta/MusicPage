@@ -1,18 +1,35 @@
-.active {
-    transform: scale(.90);
-    border-color: #695f5c;
-    box-shadow: 0 0 1rem #695f5c;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import './variables.scss';
 
 body {
     margin: 0 auto;
     padding: 0;
-    background-color: black;
+    font-family: $font;
+    background-color: $bgKeysBlackColor;
+
+    .active {
+        transform: scale(.90);
+        border-color: $activeColor;
+        box-shadow: 0 0 1rem $activeColor;
+    }
 
     .title {
         font-size: 5rem;
         text-align: center;
-        color: white;
+        color: $titleColor;
+        animation: titleAnim 2s ease 0s 1 normal forwards;
+        // filter: blur(1px);
+    }
+
+    @keyframes titleAnim {
+        0% {
+            opacity: 0;
+            filter: blur(10px);
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 
     .piano-block {
@@ -21,18 +38,25 @@ body {
         display: flex;
         justify-content: center;
         position: relative;
+        animation: titleAnim 2s ease 0s 1 normal forwards;
+
+        .active {
+            transform: scale(.90);
+            border-color: $activeColor;
+            box-shadow: 0 0 1rem $activeColor;
+        }
 
         .note {
             width: 150px;
             height: 300px;
             text-align: start;
-            border: 3px solid black;
+            border: 3px solid $bgKeysBlackColor;
             border-radius: .4rem;
             transition: all .07s ease;
         }
 
         .white {
-            background-color: rgba(255, 255, 255, 0.831);
+            background-color: $whiteKeysColor;
             z-index: 2;
 
             >p {
@@ -48,12 +72,12 @@ body {
             height: 170px;
             position: absolute;
             left: 0;
-            background-color: black;
+            background-color: $bgKeysBlackColor;
             z-index: 3;
 
             >p {
                 padding-top: 135px;
-                color: white;
+                color: $titleColor;
                 font-size: 10px;
                 text-align: center;
             }

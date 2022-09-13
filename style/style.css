@@ -1,18 +1,39 @@
-.active {
-  transform: scale(0.9);
-  border-color: #695f5c;
-  box-shadow: 0 0 1rem #695f5c;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 body {
   margin: 0 auto;
   padding: 0;
+  font-family: "Montserrat";
   background-color: black;
+}
+body .active {
+  transform: scale(0.9);
+  border-color: #695f5c;
+  box-shadow: 0 0 1rem #695f5c;
 }
 body .title {
   font-size: 5rem;
   text-align: center;
   color: white;
+  -webkit-animation: titleAnim 2s ease 0s 1 normal forwards;
+          animation: titleAnim 2s ease 0s 1 normal forwards;
+}
+@-webkit-keyframes titleAnim {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes titleAnim {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 body .piano-block {
   max-width: 600px;
@@ -20,6 +41,13 @@ body .piano-block {
   display: flex;
   justify-content: center;
   position: relative;
+  -webkit-animation: titleAnim 2s ease 0s 1 normal forwards;
+          animation: titleAnim 2s ease 0s 1 normal forwards;
+}
+body .piano-block .active {
+  transform: scale(0.9);
+  border-color: #695f5c;
+  box-shadow: 0 0 1rem #695f5c;
 }
 body .piano-block .note {
   width: 150px;
