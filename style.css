@@ -1,0 +1,70 @@
+.active {
+  transform: scale(0.9);
+  border-color: #695f5c;
+  box-shadow: 0 0 1rem #695f5c;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: black;
+}
+body .title {
+  font-size: 5rem;
+  text-align: center;
+  color: white;
+}
+body .piano-block {
+  max-width: 600px;
+  margin: 2% auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+body .piano-block .note {
+  width: 150px;
+  height: 300px;
+  text-align: start;
+  border: 3px solid black;
+  border-radius: 0.4rem;
+  transition: all 0.07s ease;
+}
+body .piano-block .white {
+  background-color: rgba(255, 255, 255, 0.831);
+  z-index: 2;
+}
+body .piano-block .white > p {
+  padding-top: 260px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+}
+body .piano-block .black {
+  width: 40px;
+  height: 170px;
+  position: absolute;
+  left: 0;
+  background-color: black;
+  z-index: 3;
+}
+body .piano-block .black > p {
+  padding-top: 135px;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+}
+body .piano-block .piano-do__black {
+  left: 65px;
+}
+body .piano-block .piano-re__black {
+  left: 150px;
+}
+body .piano-block .piano-fa__black {
+  left: 320px;
+}
+body .piano-block .piano-sol__black {
+  left: 405px;
+}
+body .piano-block .piano-la__black {
+  left: 492px;
+}/*# sourceMappingURL=style.css.map */
