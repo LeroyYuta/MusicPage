@@ -6,51 +6,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
-    <title>Piano</title>
+    <title>Synth&Pads</title>
 </head>
 
 <body>
-    <div class="title">PIANO</div>
-    <div class="piano-block">
-        <div data-key="65" class="piano-do note white">
-            <p data-key="65">A</p>
+    <div class="container">
+        <div class="piano">
+            <h2 class="piano-title">SYNTH</h2>
+            <div class="piano-block">
+                <div data-key="65" class="piano-do note white">
+                    <p data-key="65">A</p>
+                </div>
+                <div data-key="87" class="piano-do__black note black">
+                    <p data-key="87">W</p>
+                </div>
+                <div data-key="83" class="piano-re note white">
+                    <p data-key="83">S</p>
+                </div>
+                <div data-key="69" class="piano-re__black note black">
+                    <p data-key="69">E</p>
+                </div>
+                <div data-key="68" class="piano-mi note white">
+                    <p data-key="68">D</p>
+                </div>
+                <div data-key="70" class="piano-fa note white">
+                    <p data-key="70">F</p>
+                </div>
+                <div data-key="84" class="piano-fa__black note black">
+                    <p data-key="84">T</p>
+                </div>
+                <div data-key="71" class="piano-sol note white">
+                    <p data-key="71">G</p>
+                </div>
+                <div data-key="89" class="piano-sol__black note black">
+                    <p data-key="89">Y</p>
+                </div>
+                <div data-key="72" class="piano-la note white">
+                    <p data-key="72">H</p>
+                </div>
+                <div data-key="85" class="piano-la__black note black">
+                    <p data-key="85">U</p>
+                </div>
+                <div data-key="74" class="piano-si note white">
+                    <p data-key="74">J</p>
+                </div>
+            </div>
         </div>
-        <div data-key="87" class="piano-do__black note black">
-            <p data-key="87">W</p>
-        </div>
-        <div data-key="83" class="piano-re note white">
-            <p data-key="83">S</p>
-        </div>
-        <div data-key="69" class="piano-re__black note black">
-            <p data-key="69">E</p>
-        </div>
-        <div data-key="68" class="piano-mi note white">
-            <p data-key="68">D</p>
-        </div>
-        <div data-key="70" class="piano-fa note white">
-            <p data-key="70">F</p>
-        </div>
-        <div data-key="84" class="piano-fa__black note black">
-            <p data-key="84">T</p>
-        </div>
-        <div data-key="71" class="piano-sol note white">
-            <p data-key="71">G</p>
-        </div>
-        <div data-key="89" class="piano-sol__black note black">
-            <p data-key="89">Y</p>
-        </div>
-        <div data-key="72" class="piano-la note white">
-            <p data-key="72">H</p>
-        </div>
-        <div data-key="85" class="piano-la__black note black">
-            <p data-key="85">U</p>
-        </div>
-        <div data-key="74" class="piano-si note white">
-            <p data-key="74">J</p>
+        <div class="launchpad">
+            <h2 class="launchpad-title">LAUNCHPAD</h2>
+            <div class="first-group">
+                <div data-key="100" class="kick pad">
+                    <p data-key="100">num 4 <br> kick</p>
+                </div>
+                <div data-key="101" class="snare pad">
+                    <p data-key="101">num 5 <br> snare</p>
+                </div>
+            </div>
+            <div class="second-group">
+                <div data-key="97" class="hat pad">
+                    <p data-key="97">num 1 <br> hat</p>
+                </div>
+                <div data-key="98" class="crash pad">
+                    <p data-key="98">num 2 <br> crash</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <audio data-key="65" class="do" src="./data/do.mp3"></audio>
+    <!-- piano set 1 -->
+    <!-- <audio data-key="65" class="do" src="./data/do.mp3"></audio>
     <audio data-key="87" class="do-black" src="./data/doBlack.mp3"></audio>
     <audio data-key="83" class="re" src="./data/re.mp3"></audio>
     <audio data-key="69" class="re-black" src="./data/reBlack.mp3"></audio>
@@ -61,9 +85,15 @@
     <audio data-key="89" class="sol-black" src="./data/solBlack.mp3"></audio>
     <audio data-key="72" class="la" src="./data/la.mp3"></audio>
     <audio data-key="85" class="la-black" src="./data/laBlack.mp3"></audio>
-    <audio data-key="74" class="si" src="./data/si.mp3"></audio>
+    <audio data-key="74" class="si" src="./data/si.mp3"></audio> -->
 
-    <!-- <audio data-key="65" class="do2" src="./data2/do2.mp3"></audio>
+    <!-- pads -->
+    <audio data-key="100" class="kick" src="./data/kick.mp3"></audio>
+    <audio data-key="101" class="snare" src="./data/snare.mp3"></audio>
+    <audio data-key="97" class="hat" src="./data/hat.mp3"></audio>
+    <audio data-key="98" class="crash" src="./data/crash.mp3"></audio>
+    <!-- piano set 2 -->
+    <audio data-key="65" class="do2" src="./data2/do2.mp3"></audio>
     <audio data-key="87" class="do2-black" src="./data2/do2-black.mp3"></audio>
     <audio data-key="83" class="re2" src="./data2/re2.mp3"></audio>
     <audio data-key="69" class="re2-black" src="./data2/re2-black.mp3"></audio>
@@ -74,7 +104,7 @@
     <audio data-key="89" class="sol2-black" src="./data2/sol2-black.mp3"></audio>
     <audio data-key="72" class="la2" src="./data2/la2.mp3"></audio>
     <audio data-key="85" class="la2-black" src="./data2/la2-black.mp3"></audio>
-    <audio data-key="74" class="si2" src="./data2/si2.mp3"></audio> -->
+    <audio data-key="74" class="si2" src="./data2/si2.mp3"></audio>
 
 
 

@@ -7,100 +7,175 @@ body {
     font-family: $font;
     background-color: $bgKeysBlackColor;
 
-    .active {
-        transform: scale(.90);
-        border-color: $activeColor;
-        box-shadow: 0 0 1rem $activeColor;
-    }
-
-    .title {
-        margin: 5% auto;
-        font-size: 5rem;
-        text-align: center;
-        color: $whiteKeysColor;
-        animation: titleAnim 2s ease 0s 1 normal forwards;
-    }
-
-    @keyframes titleAnim {
-        0% {
-            opacity: 0;
-            filter: blur(10px);
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    .piano-block {
-        max-width: 600px;
-        margin: 2% auto;
+    .container {
         display: flex;
         justify-content: center;
-        position: relative;
+        align-items: center;
+        gap: 80px;
+        flex-wrap: wrap;
         animation: titleAnim 2s ease 0s 1 normal forwards;
 
-        .active {
-            transform: scale(.90);
-            border-color: $activeColor;
-            box-shadow: 0 0 1rem $activeColor;
-        }
+        @keyframes titleAnim {
+            0% {
+                opacity: 0;
+                filter: blur(10px);
+            }
 
-        .note {
-            width: 150px;
-            height: 300px;
-            text-align: start;
-            border: 3px solid $bgKeysBlackColor;
-            border-radius: .4rem;
-            transition: all .07s ease;
-        }
-
-        .white {
-            background-color: $whiteKeysColor;
-            z-index: 2;
-
-            >p {
-                padding-top: 260px;
-                margin: 0 auto;
-                text-align: center;
-                font-size: 12px;
+            100% {
+                opacity: 1;
             }
         }
 
-        .black {
-            width: 40px;
-            height: 170px;
-            position: absolute;
-            left: 0;
-            background-color: $bgKeysBlackColor;
-            z-index: 3;
+        .launchpad {
+            padding: 2%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $launchpadTitleColor;
+            text-align: center;
+            border: 1px solid $launchpadBorderColor;
+            border-radius: 10px;
+            background: $launchpadBg;
 
-            >p {
-                padding-top: 135px;
-                color: $titleColor;
-                font-size: 10px;
+            .launchpad-title {
+                font-size: 2rem;
                 text-align: center;
+            }
+
+            .active-pad {
+                transform: scale(.90);
+                border-color: $activeColor;
+                box-shadow: 0 0 1rem $activeColor;
+            }
+
+            .first-group,
+            .second-group {
+                display: flex;
+                gap: 20px;
+            }
+
+            .pad {
+                width: 80px;
+                height: 80px;
+
+                border-radius: 5px;
+                transition: all .07s ease;
+
+                >p {
+                    font-size: .8rem;
+                }
+            }
+
+            .first-group {
+                .kick {
+                    background: $kickColorBg;
+                    background: $kickColorGrad;
+                    border: 1px solid $kickBorderColor;
+                }
+
+                .snare {
+                    background: $snareColorBg;
+                    background: $snareColorGrad;
+                    border: 1px solid $snareColorBg;
+                }
+            }
+
+            .second-group {
+                margin-top: 20px;
+
+                .hat {
+                    background: $hatColorBg;
+                    background: $hatColorGrad;
+                    border: 1px solid $hatColorBg;
+                }
+
+                .crash {
+                    background: $crashColorBg;
+                    background: $crashColorGrad;
+                    border: 1px solid $crashColorBg;
+                }
             }
         }
 
-        .piano-do__black {
-            left: 65px;
-        }
+        .piano {
+            .piano-title {
+                margin: 5% auto;
+                font-size: 2rem;
+                text-align: center;
+                color: $whiteKeysColor;
+            }
 
-        .piano-re__black {
-            left: 150px;
-        }
+            .piano-block {
+                max-width: 600px;
+                margin: 2% auto;
+                display: flex;
+                justify-content: center;
+                position: relative;
 
-        .piano-fa__black {
-            left: 320px;
-        }
+                .active-note {
+                    transform: scale(.90);
+                    border-color: $activeColor;
+                    box-shadow: 0 0 1rem $activeColor;
+                }
 
-        .piano-sol__black {
-            left: 405px;
-        }
+                .note {
+                    width: 150px;
+                    height: 300px;
+                    text-align: start;
+                    border: 3px solid $bgKeysBlackColor;
+                    border-radius: .4rem;
+                    transition: all .07s ease;
+                }
 
-        .piano-la__black {
-            left: 492px;
+                .white {
+                    background-color: $whiteKeysColor;
+                    z-index: 2;
+
+                    >p {
+                        padding-top: 260px;
+                        margin: 0 auto;
+                        text-align: center;
+                        font-size: 12px;
+                    }
+                }
+
+                .black {
+                    width: 40px;
+                    height: 170px;
+                    position: absolute;
+                    left: 0;
+                    background-color: $bgKeysBlackColor;
+                    z-index: 3;
+
+                    >p {
+                        padding-top: 135px;
+                        color: $titleColor;
+                        font-size: 10px;
+                        text-align: center;
+                    }
+                }
+
+                .piano-do__black {
+                    left: 65px;
+                }
+
+                .piano-re__black {
+                    left: 150px;
+                }
+
+                .piano-fa__black {
+                    left: 320px;
+                }
+
+                .piano-sol__black {
+                    left: 405px;
+                }
+
+                .piano-la__black {
+                    left: 492px;
+                }
+            }
         }
     }
 }
