@@ -32,15 +32,6 @@ body {
             box-shadow: 0 0 1rem $activeColor;
         }
 
-        // .note {
-        //     width: 150px;
-        //     height: 300px;
-        //     text-align: start;
-        //     border: 3px solid $bgKeysBlackColor;
-        //     border-radius: .4rem;
-        //     transition: all .07s ease;
-        // }
-
         .launchpad {
             padding: 2%;
             display: flex;
@@ -57,12 +48,6 @@ body {
                 font-size: 2rem;
                 text-align: center;
             }
-
-            // .active-pad {
-            //     transform: scale(.90);
-            //     border-color: $activeColor;
-            //     box-shadow: 0 0 1rem $activeColor;
-            // }
 
             .first-group,
             .second-group {
@@ -126,12 +111,6 @@ body {
                 display: flex;
                 justify-content: center;
                 position: relative;
-
-                // .active-note {
-                //     transform: scale(.90);
-                //     border-color: $activeColor;
-                //     box-shadow: 0 0 1rem $activeColor;
-                // }
 
                 .note {
                     width: 150px;
