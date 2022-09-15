@@ -32,6 +32,11 @@ body .container {
     opacity: 1;
   }
 }
+body .container .active-note {
+  transform: scale(0.9);
+  border-color: #695f5c;
+  box-shadow: 0 0 1rem #695f5c;
+}
 body .container .launchpad {
   padding: 2%;
   display: flex;
@@ -48,23 +53,18 @@ body .container .launchpad .launchpad-title {
   font-size: 2rem;
   text-align: center;
 }
-body .container .launchpad .active-pad {
-  transform: scale(0.9);
-  border-color: #695f5c;
-  box-shadow: 0 0 1rem #695f5c;
-}
 body .container .launchpad .first-group,
 body .container .launchpad .second-group {
   display: flex;
   gap: 20px;
 }
-body .container .launchpad .pad {
+body .container .launchpad .note {
   width: 80px;
   height: 80px;
   border-radius: 5px;
   transition: all 0.07s ease;
 }
-body .container .launchpad .pad > p {
+body .container .launchpad .note > p {
   font-size: 0.8rem;
 }
 body .container .launchpad .first-group .kick {
@@ -102,11 +102,6 @@ body .container .piano .piano-block {
   display: flex;
   justify-content: center;
   position: relative;
-}
-body .container .piano .piano-block .active-note {
-  transform: scale(0.9);
-  border-color: #695f5c;
-  box-shadow: 0 0 1rem #695f5c;
 }
 body .container .piano .piano-block .note {
   width: 150px;
