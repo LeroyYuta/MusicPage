@@ -13,9 +13,9 @@ body {
         align-items: center;
         gap: 80px;
         flex-wrap: wrap;
-        animation: titleAnim 2s ease 0s 1 normal forwards;
+        animation: anim 2s ease 0s 1 normal forwards;
 
-        @keyframes titleAnim {
+        @keyframes anim {
             0% {
                 opacity: 0;
                 filter: blur(10px);
