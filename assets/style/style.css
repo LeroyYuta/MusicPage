@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;800&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Montserrat";
+  background: url("../img/bg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+html body .header-bg {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  z-index: 1;
+}
+html body .header-bg .header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+html body .header-bg .header .header-nav {
+  display: flex;
+  gap: 20px;
+}
+html body .header-bg .header .header-nav > a {
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #FFF;
+}
+html body .header-bg .header .header-nav > a:hover {
+  color: #EB2828;
+  border-bottom: 1px solid #EB2828;
+  transition: 0.3s;
+}
+html body .main {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 40px 0;
+  font-family: "Poppins";
+  background-color: rgba(0, 0, 0, 0.5);
+}
+html body .main .outline {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #FFF;
+}
+html body .main > h3 {
+  margin: 0;
+  padding: 10% 20px 0 20px;
+  font-size: 48px;
+  color: #FFF;
+}
+html body .main > h1 {
+  margin: 0;
+  padding: 0 20px 0 20px;
+  font-size: 100px;
+  color: transparent;
+}
+html body .main .player-container {
+  padding: 0 20px;
+}
+html body .main .player-container .player-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+html body .main .player-container .player-nav .dur-time {
+  color: #FFF;
+}
+html body .main .player-container .player-nav .play {
+  border: none;
+  background-color: transparent;
+}
+html body .main .player-container .player-nav .play .fa {
+  font-size: 3em;
+  color: rgba(235, 40, 40, 0.5058823529);
+}
+html body .main .player-container .player-nav .play .fa:hover {
+  color: rgba(152, 36, 30, 0.5568627451);
+  transition: 0.3s all;
+}
+html body .main .player-container .player-nav .progress-container {
+  background-color: #695f5c;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 4px;
+  width: 100%;
+}
+html body .main .player-container .player-nav .progress-container .progress {
+  background-color: rgba(152, 36, 30, 0.5568627451);
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+html body .main .player-container .curr-time {
+  color: rgba(235, 40, 40, 0.5058823529);
+}
+html body .main .title-newsblocks {
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  color: #FFF;
+}
+html body .main .title-newsblocks .title-newsblocks__block3 > img {
+  border: 1px solid transparent;
+  border-radius: 15px 0;
+}
+html body .main .title-newsblocks .title-newsblocks__block1,
+html body .main .title-newsblocks .title-newsblocks__block2,
+html body .main .title-newsblocks .title-newsblocks__block3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+html body .main .title-newsblocks .title-newsblocks__block1:hover,
+html body .main .title-newsblocks .title-newsblocks__block2:hover,
+html body .main .title-newsblocks .title-newsblocks__block3:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+html body .main .title-newsblocks .title-newsblocks__block1 > p,
+html body .main .title-newsblocks .title-newsblocks__block2 > p,
+html body .main .title-newsblocks .title-newsblocks__block3 > p {
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(235, 40, 40, 0.5058823529);
+  border: 1px solid transparent;
+  border-radius: 0 0 20px 0;
+}
+html body .main .title-newsblocks .title-newsblocks__block1 > p > a,
+html body .main .title-newsblocks .title-newsblocks__block2 > p > a,
+html body .main .title-newsblocks .title-newsblocks__block3 > p > a {
+  text-decoration: none;
+  color: #FFF;
+  border-bottom: 2px solid #FFF;
+}
+html body .main .title-newsblocks .title-newsblocks__block1 > p > a:hover,
+html body .main .title-newsblocks .title-newsblocks__block2 > p > a:hover,
+html body .main .title-newsblocks .title-newsblocks__block3 > p > a:hover {
+  color: #695f5c;
+  border-bottom: 2px solid #695f5c;
+}
+html body .video-block {
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+}
+html body .video-block .video {
+  width: 860px;
+  height: 480px;
+  border: 2px solid rgba(235, 40, 40, 0.5058823529);
+  box-shadow: 0px 0px 30px 10px rgba(235, 40, 40, 0.5058823529);
+}
+html body .btn-show {
+  display: flex;
+  justify-content: center;
+}
+html body .btn-show .show-synth {
+  margin: 3% auto;
+  padding: 10px 30px;
+  font-weight: 400;
+  color: #FFF;
+  border: 1px solid rgba(235, 40, 40, 0.5058823529);
+  background-color: rgba(235, 40, 40, 0.5058823529);
+}
+html body .btn-show .show-synth:hover {
+  background-color: rgba(152, 36, 30, 0.5568627451);
+  transition: 0.5s all;
+}
+html body .display {
+  display: none !important;
+}
+html body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  -webkit-animation: anim 2s ease 0s 1 normal forwards;
+          animation: anim 2s ease 0s 1 normal forwards;
+}
+@-webkit-keyframes anim {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anim {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+html body .container .active-note {
+  transform: scale(0.9);
+  border-color: #695f5c;
+  box-shadow: 0 0 1rem #695f5c;
+}
+html body .container .launchpad {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.831);
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(73, 73, 73) 100%);
+}
+html body .container .launchpad .launchpad-title {
+  font-size: 2rem;
+  text-align: center;
+}
+html body .container .launchpad .first-group,
+html body .container .launchpad .second-group {
+  display: flex;
+  gap: 20px;
+}
+html body .container .launchpad .note {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  transition: all 0.07s ease;
+}
+html body .container .launchpad .note > p {
+  font-size: 0.8rem;
+}
+html body .container .launchpad .first-group .kick {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(180deg, rgb(255, 0, 0) 33%, rgb(252, 156, 69) 100%);
+  border: 1px solid rgba(255, 0, 0, 0.365);
+}
+html body .container .launchpad .first-group .snare {
+  background: rgb(0, 72, 255);
+  background: linear-gradient(180deg, rgb(0, 72, 255) 33%, rgb(69, 205, 252) 100%);
+  border: 1px solid rgb(0, 72, 255);
+}
+html body .container .launchpad .second-group {
+  margin-top: 20px;
+}
+html body .container .launchpad .second-group .hat {
+  background: rgb(0, 177, 6);
+  background: linear-gradient(180deg, rgb(0, 177, 6) 33%, rgb(252, 250, 69) 100%);
+  border: 1px solid rgb(0, 177, 6);
+}
+html body .container .launchpad .second-group .crash {
+  background: rgb(176, 0, 255);
+  background: linear-gradient(180deg, rgb(176, 0, 255) 33%, rgb(252, 69, 229) 100%);
+  border: 1px solid rgb(176, 0, 255);
+}
+html body .container .piano .piano-title {
+  margin: 5% auto;
+  font-size: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.831);
+}
+html body .container .piano .piano-block {
+  max-width: 600px;
+  margin: 2% auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+html body .container .piano .piano-block .note {
+  width: 150px;
+  height: 300px;
+  text-align: start;
+  border: 3px solid black;
+  border-radius: 0.4rem;
+  transition: all 0.07s ease;
+}
+html body .container .piano .piano-block .white {
+  background-color: rgba(255, 255, 255, 0.831);
+  z-index: 2;
+}
+html body .container .piano .piano-block .white > p {
+  padding-top: 260px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+}
+html body .container .piano .piano-block .black {
+  width: 40px;
+  height: 170px;
+  position: absolute;
+  left: 0;
+  background-color: black;
+  z-index: 3;
+}
+html body .container .piano .piano-block .black > p {
+  padding-top: 135px;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+}
+html body .container .piano .piano-block .piano-do__black {
+  left: 65px;
+}
+html body .container .piano .piano-block .piano-re__black {
+  left: 150px;
+}
+html body .container .piano .piano-block .piano-fa__black {
+  left: 320px;
+}
+html body .container .piano .piano-block .piano-sol__black {
+  left: 405px;
+}
+html body .container .piano .piano-block .piano-la__black {
+  left: 492px;
+}
+html body .footer {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-family: "Montserrat";
+}
+html body .footer > p {
+  color: rgba(255, 255, 255, 0.642);
+}
+html body .footer > a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.642);
+}
+html body .footer > a > .fa {
+  font-size: 24px;
+}/*# sourceMappingURL=style.css.map */

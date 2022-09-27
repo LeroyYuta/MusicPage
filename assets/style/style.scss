@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;800&display=swap');
+@import './variables.scss';
+
+html {
+    scroll-behavior: smooth;
+
+    body {
+        margin: 0 auto;
+        padding: 0;
+        font-family: $font;
+        background: url('../img/bg1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+
+        .header-bg {
+            width: 100%;
+            background-color: $headerBgColor;
+            position: fixed;
+            z-index: 1;
+
+            .header {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 10px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .header-nav {
+                    display: flex;
+                    gap: 20px;
+
+                    >a {
+                        text-decoration: none;
+                        font-family: $font;
+                        font-weight: 600;
+                        color: $textColor;
+
+                        &:hover {
+                            color: $linkHoverColor;
+                            border-bottom: 1px solid $linkHoverColor;
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+        }
+
+        .main {
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 40px 0;
+            font-family: $titleFont;
+            background-color: $titleBgColor;
+
+
+            .outline {
+                -webkit-text-stroke-width: 3px;
+                -webkit-text-stroke-color: $textColor;
+            }
+
+            >h3 {
+                margin: 0;
+                padding: 10% 20px 0 20px;
+                font-size: 48px;
+                color: $textColor;
+            }
+
+            >h1 {
+                margin: 0;
+                padding: 0 20px 0 20px;
+                font-size: 100px;
+                color: transparent;
+            }
+
+            .player-container {
+                padding: 0 20px;
+
+                .player-nav {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    .dur-time {
+                        color: $textColor;
+                    }
+
+                    .play {
+                        border: none;
+                        background-color: transparent;
+
+                        .fa {
+                            font-size: 3em;
+                            color: $pBgColor;
+
+                            &:hover {
+                                color: $hoverPlay;
+                                transition: .3s all;
+                            }
+                        }
+                    }
+
+                    .progress-container {
+                        background-color: $activeColor;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        height: 4px;
+                        width: 100%;
+
+                        .progress {
+                            background-color: $hoverPlay;
+                            border-radius: 5px;
+                            height: 100%;
+                            width: 0%;
+                            transition: width .1s linear;
+                        }
+                    }
+                }
+
+                .curr-time {
+                    color: $pBgColor;
+                }
+            }
+
+            .title-newsblocks {
+                padding-top: 5%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 30px;
+                color: $textColor;
+
+                .title-newsblocks__block3 {
+                    >img {
+                        border: 1px solid transparent;
+                        border-radius: 15px 0;
+                    }
+                }
+
+                .title-newsblocks__block1,
+                .title-newsblocks__block2,
+                .title-newsblocks__block3 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                    
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: .5s;
+                    }
+
+                    >p {
+                        position: absolute;
+                        margin: 0;
+                        bottom: 0;
+                        left: 0;
+                        padding: 20px;
+                        text-align: center;
+                        background-color: $pBgColor;
+                        border: 1px solid transparent;
+                        border-radius: 0 0 20px 0;
+
+                        >a {
+                            text-decoration: none;
+                            color: $textColor;
+                            border-bottom: 2px solid $textColor;
+
+                            &:hover {
+                                color: $activeColor;
+                                border-bottom: 2px solid $activeColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .video-block {
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+
+            .video {
+                width: 860px;
+                height: 480px;
+                border: 2px solid $pBgColor;
+                box-shadow: 0px 0px 30px 10px $pBgColor;
+            }
+        }
+
+        .btn-show {
+            display: flex;
+            justify-content: center;
+
+            .show-synth {
+                margin: 3% auto;
+                padding: 10px 30px;
+                font-weight: 400;
+                color: $textColor;
+                border: 1px solid $pBgColor;
+                background-color: $pBgColor;
+
+                &:hover {
+                    background-color: $hoverPlay;
+                    transition: .5s all;
+                }
+            }
+        }
+
+        .display {
+            display: none !important;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            flex-wrap: wrap;
+            animation: anim 2s ease 0s 1 normal forwards;
+
+            @keyframes anim {
+                0% {
+                    opacity: 0;
+                    filter: blur(10px);
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            .active-note {
+                transform: scale(.90);
+                border-color: $activeColor;
+                box-shadow: 0 0 1rem $activeColor;
+            }
+
+            .launchpad {
+                padding: 2%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: $launchpadTitleColor;
+                text-align: center;
+                border: 1px solid $launchpadBorderColor;
+                border-radius: 10px;
+                background: $launchpadBg;
+
+                .launchpad-title {
+                    font-size: 2rem;
+                    text-align: center;
+                }
+
+                .first-group,
+                .second-group {
+                    display: flex;
+                    gap: 20px;
+                }
+
+                .note {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 5px;
+                    transition: all .07s ease;
+
+                    >p {
+                        font-size: .8rem;
+                    }
+                }
+
+                .first-group {
+                    .kick {
+                        background: $kickColorBg;
+                        background: $kickColorGrad;
+                        border: 1px solid $kickBorderColor;
+                    }
+
+                    .snare {
+                        background: $snareColorBg;
+                        background: $snareColorGrad;
+                        border: 1px solid $snareColorBg;
+                    }
+                }
+
+                .second-group {
+                    margin-top: 20px;
+
+                    .hat {
+                        background: $hatColorBg;
+                        background: $hatColorGrad;
+                        border: 1px solid $hatColorBg;
+                    }
+
+                    .crash {
+                        background: $crashColorBg;
+                        background: $crashColorGrad;
+                        border: 1px solid $crashColorBg;
+                    }
+                }
+            }
+
+            .piano {
+                .piano-title {
+                    margin: 5% auto;
+                    font-size: 2rem;
+                    text-align: center;
+                    color: $whiteKeysColor;
+                }
+
+                .piano-block {
+                    max-width: 600px;
+                    margin: 2% auto;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+
+                    .note {
+                        width: 150px;
+                        height: 300px;
+                        text-align: start;
+                        border: 3px solid $bgKeysBlackColor;
+                        border-radius: .4rem;
+                        transition: all .07s ease;
+                    }
+
+                    .white {
+                        background-color: $whiteKeysColor;
+                        z-index: 2;
+
+                        >p {
+                            padding-top: 260px;
+                            margin: 0 auto;
+                            text-align: center;
+                            font-size: 12px;
+                        }
+                    }
+
+                    .black {
+                        width: 40px;
+                        height: 170px;
+                        position: absolute;
+                        left: 0;
+                        background-color: $bgKeysBlackColor;
+                        z-index: 3;
+
+                        >p {
+                            padding-top: 135px;
+                            color: $titleColor;
+                            font-size: 10px;
+                            text-align: center;
+                        }
+                    }
+
+                    .piano-do__black {
+                        left: 65px;
+                    }
+
+                    .piano-re__black {
+                        left: 150px;
+                    }
+
+                    .piano-fa__black {
+                        left: 320px;
+                    }
+
+                    .piano-sol__black {
+                        left: 405px;
+                    }
+
+                    .piano-la__black {
+                        left: 492px;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background-color: $footerBgColor;
+            font-family: $font;
+
+            >p {
+                color: $footerLinksColor;
+            }
+
+            >a {
+                text-decoration: none;
+                color: $footerLinksColor;
+
+                >.fa {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
