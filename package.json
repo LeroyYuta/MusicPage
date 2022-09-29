@@ -1,0 +1,25 @@
+{
+  "name": "piano",
+  "version": "1.0.0",
+  "description": "My music page with imitation of a synth and launchpad in JS and music player",
+  "main": "script.js",
+  "scripts": {
+    "watch": "parcel index.html --open --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeroyYuta/PianoJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeroyYuta/PianoJS/issues"
+  },
+  "homepage": "https://github.com/LeroyYuta/PianoJS#readme",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
